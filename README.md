@@ -212,10 +212,6 @@ npm test
 
 
 
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
 ## ⚡ Quick Commands
 
 ```bash
@@ -233,5 +229,6 @@ npm test
 ---
 
 **⚠️ Disclaimer**: This script is provided "as is". Always test on testnets before using on mainnet. The authors are not responsible for any loss of funds.
+
 
 
