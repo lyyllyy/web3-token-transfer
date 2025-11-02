@@ -3,7 +3,6 @@
 Simple and reliable Node.js script for sending tokens in Web3 networks (Ethereum, BSC, Polygon, etc.)
 
 ![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
 ![ethers.js](https://img.shields.io/badge/ethers.js-v6-purple)
 
 ## ✨ Features
@@ -229,6 +228,7 @@ npm test
 ---
 
 **⚠️ Disclaimer**: This script is provided "as is". Always test on testnets before using on mainnet. The authors are not responsible for any loss of funds.
+
 
 
 
