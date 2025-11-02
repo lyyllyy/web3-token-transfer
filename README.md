@@ -12,7 +12,6 @@ Simple and reliable Node.js script for sending tokens in Web3 networks (Ethereum
 - ✅ Send ERC-20 tokens (USDT, USDC, DAI, etc.)
 - ✅ Support for 8+ networks (Ethereum, BSC, Polygon, Arbitrum, Optimism)
 - ✅ Testnet support (Sepolia, BSC Testnet, Mumbai)
-- ✅ Automatic RPC endpoint selection
 - ✅ Gas estimation and balance checking
 - ✅ Detailed transaction logging
 - ✅ Error handling with helpful tips
@@ -106,18 +105,6 @@ node src/transfer.js \
   --amount "0.1"
 ```
 
-## 🌐 Supported Networks
-
-| Network | ID | Native Token | Mainnet | Testnet |
-|---------|-------|--------------|---------|---------|
-| Ethereum | `ethereum` | ETH | ✅ | |
-| Sepolia | `sepolia` | ETH | | ✅ |
-| BSC | `bsc` | BNB | ✅ | |
-| BSC Testnet | `bscTestnet` | BNB | | ✅ |
-| Polygon | `polygon` | MATIC | ✅ | |
-| Mumbai | `polygonMumbai` | MATIC | | ✅ |
-| Arbitrum | `arbitrum` | ETH | ✅ | |
-| Optimism | `optimism` | ETH | ✅ | |
 
 ## 📦 Project Structure
 
@@ -127,11 +114,7 @@ web3-token-transfer/
 │   ├── transfer.js        # Main script
 │   ├── config.js          # Network configurations
 │   ├── utils.js           # Helper functions
-│   ├── validation.js      # Input validation
-│   └── rpc-selector.js    # Automatic RPC selection
-├── examples/
-│   ├── send-eth.js        # Example: Send ETH
-│   └── send-erc20.js      # Example: Send ERC-20
+│   └── validation.js      # Input validation  
 ├── scripts/
 │   ├── check-env.js       # Check configuration
 │   └── setup.sh           # Setup script
@@ -195,16 +178,13 @@ Status: Success
 
 ```bash
 # Check installation
-node test-installation.js
+node quick-test.js
 
 # Check configuration
 npm run check
 
 # Run unit tests
 npm test
-
-# Run example
-npm run example:eth
 ```
 
 ## ⚠️ Security
@@ -230,92 +210,11 @@ npm run example:eth
 
 4. Regularly rotate keys
 
-## 🐛 Troubleshooting
 
-### Common Issues
-
-**"Insufficient balance"**
-```bash
-# Solution: Check your balance and add test tokens
-https://sepoliafaucet.com
-```
-
-**"Rate limit exceeded"**
-```bash
-# Solution: Remove RPC_URL from .env for auto-selection
-# Or get free API key from Alchemy: https://www.alchemy.com
-```
-
-**"Invalid address"**
-```bash
-# Ensure address:
-# - Starts with 0x
-# - Has 42 characters
-# - Contains only hex characters
-```
-
-**"Network error"**
-```bash
-# Check internet connection
-# Try different RPC endpoint
-```
-
-## 🔄 RPC Endpoints
-
-### Automatic Selection (Recommended)
-
-Remove or comment out `RPC_URL` in `.env`:
-```env
-# RPC_URL=  # Leave empty for auto-selection
-```
-
-The script will automatically test and select the fastest available RPC.
-
-### Free RPC Providers
-
-**Sepolia:**
-```
-https://rpc2.sepolia.org
-https://ethereum-sepolia-rpc.publicnode.com
-https://ethereum-sepolia.blockpi.network/v1/rpc/public
-```
-
-**With API Key (Best):**
-- Alchemy: https://www.alchemy.com (300M compute units/month free)
-- Infura: https://infura.io (100k requests/day free)
-
-## 📖 Documentation
-
-- [Quick Start Guide](./QUICKSTART.md)
-- [RPC Endpoints List](./BEST_RPC_ENDPOINTS.md)
-- [Fix Rate Limit Error](./FIX_RATE_LIMIT.md)
-- [Full Installation Guide](./SETUP_GUIDE.md)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🔗 Links
-
-- [Ethers.js Documentation](https://docs.ethers.org/)
-- [Ethereum JSON-RPC](https://ethereum.org/en/developers/docs/apis/json-rpc/)
-- [ERC-20 Standard](https://eips.ethereum.org/EIPS/eip-20)
-
-## 💬 Support
-
-- Create an [Issue](https://github.com/YOUR_USERNAME/web3-token-transfer/issues)
-- Read [Troubleshooting Guide](./TROUBLESHOOTING.md)
-- Check [FAQ](./FAQ.md)
 
 ## ⚡ Quick Commands
 
@@ -328,31 +227,11 @@ npm run check
 
 # Run tests
 npm test
-
-# Lint code
-npm run lint
-
-# Format code
-npm run format
-
-# Run example
-npm run example:eth
 ```
 
-## 🌟 Star History
-
-If you find this project helpful, please give it a ⭐!
 
 ---
 
 **⚠️ Disclaimer**: This script is provided "as is". Always test on testnets before using on mainnet. The authors are not responsible for any loss of funds.
 
-**Made with ❤️ for the Web3 community**
 
----
-
-### 📊 Stats
-
-![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/web3-token-transfer?style=social)
-![GitHub forks](https://img.shields.io/github/forks/YOUR_USERNAME/web3-token-transfer?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/YOUR_USERNAME/web3-token-transfer?style=social)
