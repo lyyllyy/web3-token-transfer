@@ -1,0 +1,71 @@
+{
+  "name": "web3-token-transfer",
+  "version": "1.0.0",
+  "description": "Simple and reliable Web3 script for sending tokens (ETH, ERC-20, etc.)",
+  "main": "src/transfer.js",
+  "bin": {
+    "web3-transfer": "./src/transfer.js"
+  },
+  "scripts": {
+    "start": "node src/transfer.js",
+    "transfer": "node src/transfer.js",
+    "example:eth": "node examples/send-eth.js",
+    "example:erc20": "node examples/send-erc20.js",
+    "example:batch": "node examples/send-batch.js",
+    "check": "node scripts/check-env.js",
+    "setup": "bash scripts/setup.sh || node scripts/setup.bat",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.js examples/**/*.js",
+    "lint:fix": "eslint src/**/*.js examples/**/*.js --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\"",
+    "prepare": "node scripts/check-env.js || echo 'Please configure .env file'"
+  },
+  "keywords": [
+    "web3",
+    "ethereum",
+    "blockchain",
+    "token",
+    "transfer",
+    "ethers",
+    "crypto",
+    "defi",
+    "erc20",
+    "bsc",
+    "polygon"
+  ],
+  "author": "lyyllyy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/web3-token-transfer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/web3-token-transfer/issues"
+  },
+  "homepage": "https://github.com/yourusername/web3-token-transfer#readme",
+  "dependencies": {
+    "ethers": "^6.13.4",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ]
+  }
+}
