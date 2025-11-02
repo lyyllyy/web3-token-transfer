@@ -40,12 +40,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/web3-token-transfer.git"
+    "url": "git+https://github.com/lyyllyy/web3-token-transfer.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/web3-token-transfer/issues"
+    "url": "https://github.com/lyyllyy/web3-token-transfer/issues"
   },
-  "homepage": "https://github.com/yourusername/web3-token-transfer#readme",
+  "homepage": "https://github.com/lyyllyy/web3-token-transfer#readme",
   "dependencies": {
     "ethers": "^6.13.4",
     "dotenv": "^16.4.7"
